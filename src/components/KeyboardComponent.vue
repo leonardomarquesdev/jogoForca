@@ -20,15 +20,7 @@ export default {
         letters: Array,
         verifyLetter: Function,
         playLetter: Function
-    },
-    data(){
-        return {
-           
-        }
-    },
-    methods:{
-       
-    }
+    }   
 }
 </script>
 

@@ -6,6 +6,8 @@
       <FormComponent v-if="etapa === 'palavra'"
         title="Defina a palavra"
         buttonTitle="Próximo"
+        textError="Digite uma palavra sem números"
+        :msgError="msgErro"
         :action="setPalavra"
       />
 
@@ -26,8 +28,9 @@
         :letters="letras"
         :playLetter="jogarLetra"
         :restart="jogarNovamente"
-      />
+      />     
     </section>
+
   </div>
 </template>
 
@@ -45,7 +48,8 @@ export default {
       palavra: '',
       dica: '',
       erros: 0,
-      letras: []
+      letras: [],
+      msgErro: false
     }
   },
   components: {
@@ -54,6 +58,13 @@ export default {
   },
   methods:{
     setPalavra: function(palavra){
+
+      //Valida se a palavra contém números
+      if(/\d/.test(palavra)){
+        this.msgErro = true;
+        return;
+      }
+
       this.palavra = palavra;
       this.etapa = 'dica';
     },

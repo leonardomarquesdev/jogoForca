@@ -1,5 +1,5 @@
 <template>
-    <div class="endgame">
+    <div class="endgame">       
        <div :class="`end-text ${stage}`">{{endText}}</div>
 
        <button 
@@ -10,23 +10,13 @@
 </template>
 
 <script>
-
-
 export default {
     name: 'EndGameComponent',
     props: {
         stage: String,
         endText: String,
         restart: Function
-    },
-    data(){
-        return {
-           
-        }
-    },
-    methods:{
-       
-    }
+    }    
 }
 </script>
 

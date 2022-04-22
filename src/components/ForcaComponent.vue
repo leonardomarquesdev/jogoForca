@@ -1,10 +1,7 @@
 <template>
-    <div class="forca">
-        
+    <div class="forca">        
         <img :src="`https://raw.githubusercontent.com/william-costa/wdev-hangman-game-resources/master/images/hangman/${errors}.svg
 `" alt="">
-
-
     </div>    
 </template>
 
@@ -15,15 +12,7 @@ export default {
     name: 'ForcaComponent',
     props: {
         errors: Number
-    },
-    data(){
-        return {
-           
-        }
-    },
-    methods:{
-       
-    }
+    }   
 }
 </script>
 

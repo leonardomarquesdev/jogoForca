@@ -22,18 +22,7 @@ export default {
         wordTip: String,
         verifyLetter: Function,
         stage: String
-    },
-    data(){
-        return {
-           
-        }
-    },
-    methods:{
-       
-    },
-    components:{
-       
-    }
+    }    
 }
 </script>
 

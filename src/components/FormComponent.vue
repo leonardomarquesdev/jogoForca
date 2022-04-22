@@ -8,17 +8,26 @@
             :disable="inputValue.length === 0"
             v-on:click="onSubmit"
             >{{buttonTitle}}</button>
+
+         <TextInfoComponent 
+            :textError="textError"
+            :msgError="msgError"
+         />
     </div>    
 </template>
 
 <script>
+import TextInfoComponent from './TextInfoComponent.vue';
+
 
 export default {
     name: 'FormComponent',
     props: {
         title: String,
         buttonTitle: String,
-        action: Function
+        action: Function,
+        textError: String,
+        msgError: Boolean
     },
     data(){
         return {
@@ -30,6 +39,9 @@ export default {
             this.action(this.inputValue);
             this.inputValue = '';
         }
+    },
+    components: {
+        TextInfoComponent
     }
 }
 </script>

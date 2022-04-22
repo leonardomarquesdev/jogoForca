@@ -20,9 +20,9 @@
         />
 
         <EndGameComponent 
-            v-if="etapa != 'jogo'"
+            v-if="stage != 'jogo'"
             :stage="stage"
-            :endText="stage === 'ganhador' ? 'Parabéns :)' : 'Tadinho :('"
+            :endText="stage === 'ganhador' ? 'Acertou, parabéns! :)' : 'Você perdeu :('"
             :restart="restart"
         />
 
@@ -47,15 +47,7 @@ export default {
         letters: Array,
         playLetter: Function,
         restart: Function
-    },
-    data(){
-        return {
-           
-        }
-    },
-    methods:{
-       
-    },
+    },    
     components:{
         ForcaComponent,
         WordComponent,
